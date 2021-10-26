@@ -9,28 +9,110 @@ export default function Home() {
       </Head>
 
       <main>
-      
-        
-        
         <div style={{margin: 20}}>
         <img src="/logo.png" alt="Mothership" width="200" />
         </div>
         <h1 className="title">
           Welcome aboard. 
         </h1>
+        <div>
+          Mothership is the first user-owned social metaverse.
+        </div>
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>White Paper &rarr;</h3>
-            <p>A Model of a User Owned and Moderated Social Network</p>
+          <a href="/whitepaper.pdf" className="card">
+            <h3> White Paper &rarr;</h3>
+            <p>Mothership: A Model of a User Owned and Moderated Social Network</p>
           </a>
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Sign Up &rarr;</h3>
-            <p>A Model of a User Owned and Moderated Social Network</p>
+          <a className="card">
+            <h3>Stay in Touch &rarr;</h3>
+            <p>Join our email list to stay updated on our ICO, exclusive NFT airdrops, and more. </p>
           </a>
-          <a href="https://nextjs.org/docs" className="card">
+          {/* <a href="https://nextjs.org/docs" className="card">
             <h3>Roadmap &rarr;</h3>
             <p>A Model of a User Owned and Moderated Social Network</p>
-          </a>
+          </a> */}
+          
+          <div>
+            <table className="roadmap">
+              <tr>
+                <th>
+                  Roadmap
+                </th>
+              </tr>
+              <tr>
+                <td>
+                Home Page Build Out with email list sign up and Road Map. 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                Release MothershipCoin to Investors.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Connect Wallet on user signup, Connect MCoin to actions: Liking, Following, and Flagging, Verify Email.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Build out Commenting workflow. 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Build out Decentralised Moderation Flow and Messaging. 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Migrate in-app currency to XRP side chain. 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                Release 5,000 NFTs in a OG Mothership Collection and Investors. Send app invites to NFT holders. 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                Release 5,000 NFTs in a OG Mothership Collection and Investors. Send app invites to NFT holders. 
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                Release update to connect to ERC20 Wallet. 
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                Expand the release to general public. 
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                Enable the deposit of MCoin to Airdrop pool. 
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                First Airdrop MothershipCoin airdrop to users. 
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                  Begin development App to Release to App Store and Google Play Store. 
+                </td>
+              </tr>              
+              <tr>
+                <td>
+                  Release Google Play Version and Android Version of Mothership to the general public. 
+                </td>
+              </tr>              
+
+              
+            </table>
+            </div>
           
         </div>
       </main>

@@ -1,0 +1,10 @@
+.roadmap {
+    margin-top: 50px;
+    font-size: 1.25rem;
+}
+
+.roadmap td {
+    text-align: center;
+    padding: 12px;
+}
+

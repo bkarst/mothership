@@ -47,3 +47,13 @@
     justify-content: center;
     cursor: pointer;
 }
+
+.selected-class{
+    border-bottom: #000 3px solid;
+    cursor: pointer;
+}
+
+.unselected-class{
+    border-bottom: #fff 3px solid;
+    cursor: pointer;
+}

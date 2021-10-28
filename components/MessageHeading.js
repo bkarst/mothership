@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Stories, { WithSeeMore } from 'react-insta-stories'
 import { useSelector } from "react-redux"
 
-const messageClicked = () => {
-    alert("Message Clicked.");
-}
-
 export default function MessageHeading(props){
     
     const loggedInStatus = useSelector(state => state.loggedInStatus)

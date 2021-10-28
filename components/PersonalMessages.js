@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import MessageHeading from './MessageHeading'
 import Stories, { WithSeeMore } from 'react-insta-stories'
 
-
 const image = {
 	display: 'block',
 	maxWidth: '100%',

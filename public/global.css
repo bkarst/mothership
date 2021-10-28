@@ -17,6 +17,11 @@
     justify-content: flex-start;
 }
 
+.profile-pic{
+    
+    object-fit: cover;
+}
+
 .messages-heading-profile-pic{
     padding: 5px;
     width: 50px;
@@ -32,16 +37,51 @@
 
 }
 
+.name-container{
+    padding: 14px;
+        font-family: monospace;
+        width: 180px;
+        font-weight: 200;
+        text-align: left;
+        font-size: 16px;
+        padding-left: 20px;
+}
+
+.subject-container{
+    padding: 14px;
+    font-family: monospace;
+    width: 180px;
+    font-weight: 200;
+    text-align: left;
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+.profile-pic-container{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;;
+    background: '#000'
+}
+
 .feed-select-image{
     width: 100px;      
 }
-
+.inbox-container{
+    margin-top: 40px;
+}
 .inbox-title-bar{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .messages-container{
     display: flex;
+    margin: auto;
+    text-align: center;
+    align-self: center;
+    width: 700px;
+    margin-left:10%;
 }
 .inbox-title-bar-label{
     justify-content: center;

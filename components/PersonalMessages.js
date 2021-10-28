@@ -95,50 +95,23 @@ export default function PersonalMessages(props){
 />
 	const [currentStory, setCurrentStory] = useState(emptyStory);
 	if (currentStory == 0){
-		jsx = <div>empty story</div>
+		jsx = <div style={{fontFamily:"monospace", color: "darkblue"}}>
+			Click on a Message to see the new way to go through your Inbox.
+			</div>
 	}
-    //     return (
-    //         <div className="stories">
-	// 			<Stories
-	// 				loop
-	// 				keyboardNavigation
-	// 				defaultInterval={8000}
-	// 				stories={stories2}
-	// 				onStoryEnd={(s, st) => console.log('story ended', s, st)}
-	// 				onAllStoriesEnd={(s, st) => console.log('all stories ended', s, st)}
-	// 				onStoryStart={(s, st) => console.log('story started', s, st)}
-	// 				storyContainerStyles={{ borderRadius: 8, overflow: 'hidden' }}
-	// 			/>
-	// 		</div>
-    //     )
-    // }
+
     return (
         <div className='messages-container'>
             <div onClick={() => setCurrentStory(1) }>
-                < MessageHeading subject={"Subject"}
-                    name={"My Name"}
-                    profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />
-				< MessageHeading subject={"Subject"}
-									name={"My Name"}
-									profilePic={"/concerned.png"} />																																			
+				< MessageHeading subject={"Global Payment Settlements"}
+									name={"David Schwartz"}
+									profilePicUrl={"/schwartz.jpeg"} />
+				< MessageHeading subject={"Boot the Metaverse"}
+									name={"Mark Zuckerberg"}
+									profilePicUrl={"/zuck.jpeg"} />
+				< MessageHeading subject={"Electric Ladyland"}
+									name={"Elon Musk"}
+									profilePicUrl={"/musk.jpeg"} />
             </div>
 			<div>
 				{jsx}

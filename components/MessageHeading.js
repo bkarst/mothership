@@ -8,10 +8,11 @@ export default function MessageHeading(props){
 
     return (
         <div className='message-heading-container'>
-            <div className='profile-pic-container'>
-                <img src={props.profilePicUrl} className='profile-pic' />
+            <div >
+                <img src={props.profilePicUrl} height='50px' width='50px' className='profile-pic' />
             </div>
-            <div className='name-container'>
+            <div  className='name-container'>
+            
                 {props.name}
             </div>
             <div className='subject-container'>

@@ -1,21 +1,7 @@
-// import '../styles/globals.css'
-
-// function MyApp({ Component, pageProps }) {
-//   return <Component {...pageProps} />
-// }
-
-// export default MyApp
-
-// import '../public/css/webflow.css'
-// import '../public/webflow-tweak.css'
-// import '../public/css/globals.css'
 import '../public/global.css'
-// import '../public/expert-landing.css'
-// import '../public/expert-landing.css'
-// import '../public/expert-landing.css'
-// import '../public/expert-landing.css'
-
-
+import '../public/app.css'
+import { Provider } from 'react-redux'
+import store from '../store'
 
 {/* <link href="/expert-landing.css" rel="stylesheet" type="text/css">
 <link href="/normalize.css" rel="stylesheet" type="text/css">
@@ -36,6 +22,10 @@ import '../public/global.css'
 export default function MyApp({ Component, pageProps }) {
   console.log("myApp")
   return (
+    <Provider store={store}>
       <Component {...pageProps} />
+    </Provider>
   )
 }
+
+

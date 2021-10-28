@@ -10,13 +10,13 @@ export default function Home() {
 
       <main>
         <div style={{margin: 20}}>
-        <img src="/logo.png" alt="Mothership" width="200" />
+          <img src="/logo.png" alt="Mothership" width="200" />
         </div>
         <h1 className="title">
           Welcome aboard. 
         </h1>
         <div>
-          Mothership is the first user-owned social metaverse.
+          Mothership is the first user-owned social network. 
         </div>
         <div className="grid">
           <a href="/whitepaper.pdf" className="card">

@@ -8,3 +8,42 @@
     padding: 12px;
 }
 
+.messages-heading-container {
+    display: flex;
+}
+
+.message-heading-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.messages-heading-profile-pic{
+    padding: 5px;
+    width: 50px;
+}
+
+.messages-heading-subject{
+    padding: 5px;
+    font-family: Helvetica;
+}
+
+.feed-select-container{
+    width: 100px;
+
+}
+
+.feed-select-image{
+    width: 100px;      
+}
+
+.inbox-title-bar{
+    display: flex;
+    justify-content: center;
+}
+.messages-container{
+    display: flex;
+}
+.inbox-title-bar-label{
+    justify-content: center;
+    cursor: pointer;
+}

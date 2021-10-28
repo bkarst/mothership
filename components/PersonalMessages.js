@@ -31,15 +31,37 @@ const customSeeMore = {
 }
 
 const Story2 = ({ action, isPaused }) => {
-	return <div style={{ ...contentStyle, background: 'Aquamarine', color: '#333' }}>
-		<h1>This is the contents of your personal message.</h1>
-		<p>You can share stories publicly or send them directly</p>
-		<h1>{isPaused ? 'Paused' : 'Playing'}</h1>
+	return <div style={{ ...contentStyle,  background: '#000', color: '#fff', paddingTop: 100 }}>
+		<h2>Stories are like social media posts.</h2>
+		<h1>You can share stories publicly or send them directly to your friends.</h1>
+	</div>
+}
+
+const Story3 = ({ action, isPaused }) => {
+	return <div style={{ ...contentStyle,  background: '#000', color: '#fff', paddingTop: 100 }}>
+		<h2>The younger generation is accustomed to media rich content and messaging.</h2>
 	</div>
 }
 
 const stories2 = [
 	{
+		content: Story2
+	},
+	{
+		url: 'https://picsum.photos/1080/1920',
+		seeMore: ({ close }) => <div style={{ maxWidth: '100%', height: '100%', padding: 40, background: 'white' }}><h2>Just checking the see more feature.</h2><p style={{ textDecoration: 'underline' }} onClick={close}>Go on, close this popup.</p></div>
+	},
+	{
+		url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+		type: 'video'
+	}
+]
+
+const stories3 = [
+	{
+			content: Story3
+		},
+		{
 		content: ({ action, isPaused }) => {
 			return <div style={contentStyle}>
 				<p>Users.</p>
@@ -67,33 +89,33 @@ const stories2 = [
 		seeMoreCollapsed: ({ toggleMore, action }) => <p style={customSeeMore} onClick={() => toggleMore(true)}>A custom See More message →</p>,
 		seeMore: ({ close }) => <div style={{ maxWidth: '100%', height: '100%', padding: 40, background: 'white' }}><h2>Just checking the see more feature.</h2><p style={{ textDecoration: 'underline' }} onClick={close}>Go on, close this popup.</p></div>,
 		duration: 5000
-	},
-	{
-		url: 'https://picsum.photos/1080/1920',
-		seeMore: ({ close }) => <div style={{ maxWidth: '100%', height: '100%', padding: 40, background: 'white' }}><h2>Just checking the see more feature.</h2><p style={{ textDecoration: 'underline' }} onClick={close}>Go on, close this popup.</p></div>
-	},
-	{
-		url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-		type: 'video'
-	},
-	{
-		content: Story2
 	}
 ]
 
+
+
 export default function PersonalMessages(props){
 	const emptyStory = 0
+	const stories = [stories2, stories3]
+	
+	var selectedStory = stories2
+	
+	
+
+	const [currentStory, setCurrentStory] = useState(emptyStory);
+	console.log(currentStory%2 == 0)
+	if (currentStory%2 == 0){
+		selectedStory = stories3
+	}
 	var jsx = <Stories
-	loop
+	
 	keyboardNavigation
 	defaultInterval={8000}
-	stories={stories2}
+	stories={selectedStory}
 	onStoryEnd={(s, st) => console.log('story ended', s, st)}
 	onAllStoriesEnd={(s, st) => console.log('all stories ended', s, st)}
 	onStoryStart={(s, st) => console.log('story started', s, st)}
-	storyContainerStyles={{ borderRadius: 8, overflow: 'hidden' }}
-/>
-	const [currentStory, setCurrentStory] = useState(emptyStory);
+	storyContainerStyles={{ borderRadius: 8, overflow: 'hidden' }} />
 	if (currentStory == 0){
 		jsx = <div style={{fontFamily:"monospace", color: "darkblue"}}>
 			Click on a Message to see the new way to go through your Inbox.
@@ -102,16 +124,22 @@ export default function PersonalMessages(props){
 
     return (
         <div className='messages-container'>
-            <div onClick={() => setCurrentStory(1) }>
-				< MessageHeading subject={"Global Payment Settlements"}
-									name={"David Schwartz"}
-									profilePicUrl={"/schwartz.jpeg"} />
-				< MessageHeading subject={"Boot the Metaverse"}
-									name={"Mark Zuckerberg"}
-									profilePicUrl={"/zuck.jpeg"} />
-				< MessageHeading subject={"Electric Ladyland"}
+            <div onClick={() => setCurrentStory(currentStory + 1) }>
+			< MessageHeading subject={"The Meaning of Life"}
 									name={"Elon Musk"}
-									profilePicUrl={"/musk.jpeg"} />
+									profilePicUrl={"/musk.jpeg"} 
+									date='7 months ago'
+									/>
+				< MessageHeading subject={"XRP to the Moon"}
+									name={"David Schwartz"}
+									profilePicUrl={"/schwartz.jpeg"} 
+									date='today'
+									/>
+				< MessageHeading subject={"Facebook 2.0"}
+									name={"Mark Zuckerberg"}
+									profilePicUrl={"/zuck.jpeg"} 
+									date='yesterday' />
+				
             </div>
 			<div>
 				{jsx}

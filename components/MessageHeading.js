@@ -18,6 +18,9 @@ export default function MessageHeading(props){
             <div className='subject-container'>
                 {props.subject}
             </div>
+            <div style={{width: 100}} className='subject-container'>
+                {props.date}
+            </div>
         </div>
     )
 }

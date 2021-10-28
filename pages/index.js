@@ -27,6 +27,10 @@ export default function Home() {
             <h3>Stay in Touch &rarr;</h3>
             <p>Join our email list to stay updated on our ICO, exclusive NFT airdrops, and more. </p>
           </a>
+          <a className="card" href='/demo'>
+            <h3>Very Rough Prototype &rarr;</h3>
+            <p>This is not MVP or beta. Just an example of what a feed might start to look like. </p>
+          </a>
           {/* <a href="https://nextjs.org/docs" className="card">
             <h3>Roadmap &rarr;</h3>
             <p>A Model of a User Owned and Moderated Social Network</p>
